@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #0f172a; /* dark blue */
+      font-family: Arial, sans-serif;
+    }
+
+    #clock {
+      font-size: 60px;
+      color: #38bdf8; /* light blue */
+      
+      padding: 20px 40px;
+      border-radius: 15px;
+
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+<body>
+
+<h1 id="clock"></h1>
+
+<script>
+setInterval(function() {
+  let now = new Date();
+  document.getElementById("clock").innerText = now.toLocaleTimeString();
+}, 1000);
+</script>
+
+</body>
+</html>
